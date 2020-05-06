@@ -1,0 +1,26 @@
+extends ../layout/layout-base.pug
+
+block content
+  .chat-container
+    header.chat-header
+      h1 #[i.fas.fa-comment-dots] ChatApp
+      a(class="btn" href="/") Sair da sala
+    main.chat-main
+      .chat-sidebar
+        h3 #[i.fas.fa-comments] Sala:
+        //- Nome da sala
+        h2#room-name
+        h3 #[i.fas.fa-users] Usuários
+        //- Lista de usuários
+        ul#users
+      .chat-messages
+    .chat-form-container
+      form(id="chat-form")
+        input(
+          id="msg"
+          type="text"
+          placeholder="Escreva sua mensagem..."
+          required
+          autocomplete="off"
+        )
+        button(class="btn") #[i.fas.fa-paper-plane] Enviar

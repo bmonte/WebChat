@@ -1,0 +1,34 @@
+extends ../layout/layout-base.pug
+
+block content
+  .login-container
+    .card
+      .card-header.mt-2
+        h1 #[i.fas.fa-comment-dots] ChatApp
+      .card-body
+        form(action="chat")
+          .form-group
+            label(for="username").
+              Usuario
+            .input-group
+              .input-group-prepend
+                span.input-group-text #[i.fas.fa-user]
+              input(
+                id="username"
+                type="text"
+                name="username"
+                class="form-control" 
+                placeholder="Digite o nome do usuario..."
+                required
+              )
+          .form-group
+            label(for="room") Salas
+            select(id="room" name="room" class="form-control")
+              option(value="JavaScript") JavaScript
+              option(value="Python") Python
+              option(value="PHP") PHP
+              option(value="C#") C#
+              option(value="Ruby") Ruby
+              option(value="Java") Java
+          .form-button.pt-4
+            button(type="submit" class="btn btn-light btn-block") Entrar na sala
