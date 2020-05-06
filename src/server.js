@@ -11,7 +11,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 // Configurando a porta do servidor
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 io.on("connection", socket => {
   socket.on("join chat", ({ username, room }) => {
