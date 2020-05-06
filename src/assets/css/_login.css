@@ -1,0 +1,17 @@
+/* Login page */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-container .card {
+  color: white;
+	text-align: center;
+	background: var(--dark-color-a);
+}
+
+.login-container .card-body {
+	background: var(--dark-color-b);
+}

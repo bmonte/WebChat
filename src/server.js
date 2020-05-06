@@ -3,12 +3,13 @@ const http = require("http");
 const app = require("./app");
 
 const { userJoin, userLeaves, getCurrentUser, getRoomUsers, } = require("./utils/users");
+const {insertMessage, getHistory } = require('./utils/history'); 
 const formataMensagem = require("./utils/messages");
 // Define o nome do bot usado
 const botName = "ChatBot";
 
 const server = http.createServer(app);
-const io = socketio(server);
+const io = socketio(server).of('/chat');
 
 // Configurando a porta do servidor
 const PORT = process.env.PORT || 3000;

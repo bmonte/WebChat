@@ -1,0 +1,8 @@
+/* 404 Page */
+.error-container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}

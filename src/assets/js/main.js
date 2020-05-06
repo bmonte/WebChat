@@ -3,7 +3,7 @@ const $chatMessages = document.getElementsByClassName('chat-messages')[0];
 const $roomName = document.getElementById('room-name');
 const $usersList = document.getElementById('users');
 
-const socket = io();
+const socket = io('/chat');
 
 const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true
